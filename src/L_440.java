@@ -11,7 +11,26 @@ public class L_440 {
         System.out.println(findKthNumber(3564, 5));
     }
 
+    static class TrieNode {
+        TrieNode[] children;
+        int index;
+        int value;
+
+        TrieNode(int value, int index) {
+            this.value = value;
+            children = new TrieNode[10];
+            this.index = index;
+        }
+    }
     public static int findKthNumber(int n, int k) {
+        TrieNode root = new TrieNode(1,1);
+        while (root.value < n && root.index < k){
+
+        }
+        return 1;
+    }
+
+    public static int findKthNumber3(int n, int k) {
         if (n < 10) return k;
         return findKthNumber2(n, k);
     }
